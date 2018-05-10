@@ -14,8 +14,8 @@ public class FuelDepot {
     public int nextTankToFill(int threshold) {
         /* to be implemented in part (a) */ 
         int lowest = 0;
-        int lowestLevel = tanks.get(i).getFuelLevel();
-        while (lowest<tanks.size()){
+        int lowestLevel = tanks.get(lowest).getFuelLevel();
+        for (int i=1; i<tanks.size(); i++){
             if (tanks.get(i).getFuelLevel() < lowestLevel){
                 lowestLevel = tanks.get(i).getFuelLevel();
                 lowest = i;

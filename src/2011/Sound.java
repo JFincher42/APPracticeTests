@@ -21,9 +21,10 @@ public class Sound {
             int mag = Math.abs(samples[i]) / samples[i];
 
             // Check if the value it outside the limit - if so, reassign it
-            if (Math.abs(samples[i])>limit)
+            if (Math.abs(samples[i])>limit){
                 samples[i] = limit * mag;
                 count++;
+            }
         }
 
         // How many did we change?
